@@ -17,7 +17,6 @@ public class ProductController {
         Iterable<Product> products = productService.getAllProducts();
         return productService.getAllProducts();
     }
-
     @PostMapping
     public Product createProduct(@RequestBody Product product) {
         return  productService.createProduct(product.getName(),product.getDescription(),product.getPrice(),product.getQuantity(),product.getCategory().getId(),product.isAvailable());
